@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/BasicTemplate.xhtml">
+	
+	
+	<ui:define name="content">
+	     
+	     
+	     <div style="width:100%;font-size:36px;line-height:48px;background-color:#28395C;color:white">Bienvenido a la web de Vikmar. Ingresa tus datos...
+	     </div>
+	     
+	     <h:form>
+	     <h:graphicImage url="/images/logos/LogoVikmar2013.png" width="154" height="128"></h:graphicImage>
+            <hr> </hr>
+            
+            <h:panelGrid columns="2">
+            	
+				<h:outputText value="Usuario:"></h:outputText>
+                <h:inputText value="#{loginBean.name}" required="true"></h:inputText>
+                <h:outputText value="Contraseña:"></h:outputText>
+                <h:inputSecret value="#{loginBean.password}" required="true"></h:inputSecret>
+            </h:panelGrid>
+            <h:commandButton value="Inicia Sesión" action="#{loginBean.checkPassword()}" ></h:commandButton>
+           
+        </h:form>
+	</ui:define>
+
+</ui:composition>
+</html>
