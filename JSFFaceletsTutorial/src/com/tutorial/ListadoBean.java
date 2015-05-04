@@ -23,6 +23,7 @@ public class ListadoBean implements Serializable {
 	public String getSalute()
 	{
 		this.createList();
+		System.out.println("Antes de regresar Saludo");
 		return this.salutation;
 	}
 	
