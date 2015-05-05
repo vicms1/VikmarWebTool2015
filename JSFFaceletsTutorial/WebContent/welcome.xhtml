@@ -158,7 +158,10 @@
       	<h3>Julio 2014</h3>
    <a href="javascript:popup('/JSFFaceletsTutorial/images/Corporativo/2014/07 Julio/31/RelacionConsumoJulioEnvasesFarmaciasDelAhorroSur.pdf')"><h:graphicImage url="/images/Corporativo/2014/07%20Julio/31/RelacionConsumoJulioEnvasesFarmaciasDelAhorroSur.png" width="154" height="128"></h:graphicImage> </a>
  
-   
+		<h3>Prueba Obtener Farmacia</h3>
+   		<ui:repeat value="#{listadoBean.pharmacies}" varStatus="loop">
+   		<div style="width:100%;font-size:36px;line-height:48px;background-color:#28395C;color:white"> <h:outputText value="#{listadoBean.pharmacies[loop.index]}"> </h:outputText> !! </div>
+   		</ui:repeat>
    <hr />		
 	</ui:define>
 

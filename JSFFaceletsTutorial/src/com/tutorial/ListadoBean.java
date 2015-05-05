@@ -119,6 +119,12 @@ public class ListadoBean implements Serializable {
 		{
 			this.ruta = rF;	
 		}
+		
+		public String toString()
+		{
+			return this.nombreDeFarmacia;
+		}
+		
 	}
 	
 }
