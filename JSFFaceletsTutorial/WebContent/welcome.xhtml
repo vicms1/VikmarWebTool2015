@@ -160,7 +160,8 @@
  
 		<h3>Prueba Obtener Farmacia</h3>
    		<ui:repeat value="#{listadoBean.pharmacies}" varStatus="loop">
-   		<div style="width:100%;font-size:36px;line-height:48px;background-color:#28395C;color:white"> <h:outputText value="#{listadoBean.pharmacies[loop.index]}"> </h:outputText> !! </div>
+   		<!--<div style="width:100%;font-size:36px;line-height:48px;background-color:#28395C;color:white"> <h:outputText value="#{listadoBean.pharmacies[loop.index]}"> </h:outputText> </div>-->
+   		<div style="width:100%;font-size:36px;line-height:48px;background-color:#28395C;color:white"> <h:outputText value="#{listadoBean.pharmacies[loop.index]}"> </h:outputText> Ruta de Farmacia: <h:outputText value="#{listadoBean.pharmacies[loop.index].rutaDeFarmacia}"> </h:outputText> id de Farmacia <h:outputText value="#{listadoBean.pharmacies[loop.index].idFarmacia}"> </h:outputText> Index: !! <h:outputText value="#{[loop.index]}"> </h:outputText> </div>
    		</ui:repeat>
    <hr />		
 	</ui:define>
