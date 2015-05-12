@@ -10,7 +10,9 @@
 
 	<ui:define name="content">
 	
-	
+	<h:head>
+    	<h:outputStylesheet library="css" name="table-style.css"  />
+    </h:head>
 	
 	<script type="text/javascript">
 
@@ -163,7 +165,37 @@
    		<!--<div style="width:100%;font-size:36px;line-height:48px;background-color:#28395C;color:white"> <h:outputText value="#{listadoBean.pharmacies[loop.index]}"> </h:outputText> </div>-->
    		<div style="width:100%;font-size:36px;line-height:48px;background-color:#28395C;color:white"> <h:outputText value="#{listadoBean.pharmacies[loop.index]}"> </h:outputText> Ruta de Farmacia: <h:outputText value="#{listadoBean.pharmacies[loop.index].rutaDeFarmacia}"> </h:outputText> id de Farmacia <h:outputText value="#{listadoBean.pharmacies[loop.index].idFarmacia}"> </h:outputText> Index: !! <h:outputText value="#{[loop.index]}"> </h:outputText> </div>
    		</ui:repeat>
-   <hr />		
+   <hr />
+
+		<h3>Prueba De Una Tabla</h3>
+			
+			<h:dataTable value="#{listadoBean.pharmacies}" var="o"
+    			styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,order-table-even-row"
+    		>
+ 
+    			<h:column>
+    				<!-- column header -->
+    				<f:facet name="header">Farmacia</f:facet>
+    				<!-- row record -->
+    				#{o.nombreDeFarmacia}
+    			</h:column>
+ 
+    			<h:column>
+    				<f:facet name="header">Ruta de Farmacia</f:facet>
+    				#{o.rutaDeFarmacia}
+    			</h:column>
+ 
+    			<h:column>
+    				<f:facet name="header">Id de Farmacia</f:facet>
+    				#{o.idFarmacia}
+    			</h:column>
+ 
+    		</h:dataTable>
+   <hr />
+   
+   		
 	</ui:define>
 
 </ui:composition>
