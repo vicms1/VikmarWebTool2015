@@ -21,85 +21,14 @@
 	}
 	</script>
 	
-		<div style="width:100%;font-size:36px;line-height:48px;background-color:#28395C;color:white"> <h:outputText value="#{listadoBean.salute}"> </h:outputText> Hola <h:outputText value="#{loginBean.name}"></h:outputText>... </div>
+		<div style="width:100%;font-size:36px;line-height:48px;background-color:#28395C;color:white"> <h:outputText value="#{listadoBean.salute}"> </h:outputText> Hola <h:outputText value="#{loginBean.name}"></h:outputText>... Hola otra vez <h:outputText value="#{loginBean.name}"></h:outputText>... YYY Hola OTRAVEZ! <h:outputText value="#{loginBean.name}"></h:outputText>... </div>
 
-		<!-- <a href="javascript:popup('/JSFFaceletsTutorial/images/graficas/Concentrado.png')"> <h:graphicImage url="/images/graficas/Concentrado.png" width="154" height="128"></h:graphicImage> </a>
-		 <a href="javascript:popup('/JSFFaceletsTutorial/images/graficas/RutaUno.png')"><h:graphicImage url="/images/graficas/RutaUno.png" width="154" height="128"></h:graphicImage> </a>
-		 <a href="javascript:popup('/JSFFaceletsTutorial/images/graficas/Ruta2.png')"><h:graphicImage url="/images/graficas/Ruta2.png" width="154" height="128"></h:graphicImage> </a>
-		 <a href="javascript:popup('/JSFFaceletsTutorial/images/graficas/Ruta3.png')"><h:graphicImage url="/images/graficas/Ruta3.png" width="154" height="128"></h:graphicImage> </a>
-		 
-		<h:outputLabel value="Welcome #{loginBean.name} your password is #{loginBean.password}"></h:outputLabel>
-		<p><a href="javascript:popup('http://localhost:8080/JSFFaceletsTutorial/images/graficas/RutaUno.png')">Here is a red popup.</a>
-		<a href="javascript:popup('http://localhost:8080/JSFFaceletsTutorial/images/graficas/Ruta3.png')">Here is a blue popup.</a></p>
-		
-		<p>They both use the same function, we just pass different things <i>to</i> the function. You can do this with any or all of the parameters of the popup window.</p>
-		
-	<h:outputStylesheet library="css" name="/JSFFaceletsTutorial/resources/css/table-style.css"  />
-	<h1>JSF 2 dataTable example</h1>
- 
-    		<h:dataTable value="#{listadoBean.pharmacies}" var="l">
- 
-    			<h:column>
-    				<f:facet name="header">Id de Farmacia</f:facet>
-    				#{l.idFarmacia}
-    			</h:column>
- 
-    			<h:column>
-    				<f:facet name="header">Nombre de Farmacia</f:facet>
-    				#{l.nombreDeFarmacia}
-    			</h:column>
- 
-    			
- 
-    		</h:dataTable>
-    		
-    <h3>Add Employee</h3>
-      <hr/>
-      <table>
-      <tr>
-            <td>Name :</td>
-            <td><h:inputText size="10" value="#{loginBean.name}" /></td>
-      </tr>
-      <tr>
-            <td>Department :</td>
-            <td><h:inputText size="20" value="#{listadoBean.salute}" /></td>
-      </tr>
-      <tr>
-            <td> </td>
-            <td><h:commandButton value="Ingresar Farmacia" 
-               action="#{userData.addEmployee}" /></td>
-      </tr>
-      </table>	
-      
-     <h2>DataTable Example</h2>
-  		<h:dataTable value="#{listadoBean.pharmacies}" var="f">
-         <h:column>    				
-            <f:facet name="header">ID</f:facet>    				
-            #{f.idFarmacia}
-         </h:column>
-         <h:column>
-            <f:facet name="header">Farmacia</f:facet>
-            #{f.nombreDeFarmacia}
-         </h:column>
-         
-      </h:dataTable>
-      
-    <h2>DataTable 3</h2>      
-		<h:dataTable var="t" value="#{listadoBean.pharmacies}">
-    		<h:column headerText="Id">
-        	<h:outputText value="#{t.idFarmacia}" />
-    		</h:column>
- 
-		    <h:column headerText="Pharmacie">
-        	<h:outputText value="#{t.nombreDeFarmacia}" />
-    		</h:column>
- 
-		</h:dataTable>
-	 -->
+
 	<h1>Analisis de Envases en Stock en Farmacia</h1>
    <hr />
    	<h2>Puebla Norte</h2>
    	<h3>Abril 2014</h3>   
+ 		<div style="width:100%;font-size:36px;line-height:48px;background-color:#28395C;color:white"> <h:outputText value="#{listadoBean.salute}"> </h:outputText> Para rastrear en Analisis de Envases en Stock en Farmacia <h:outputText value="#{loginBean.name}"></h:outputText>... </div>
    <h:form>
 
  	  <a href="javascript:popup('/JSFFaceletsTutorial/images/Corporativo/2014/04 Abril/30/AnalisisDe Retención de Producto Norte.pdf')"><h:graphicImage url="/images/Corporativo/2014/04%20Abril/30/AnalisisDe%20Retenci%C3%B3n%20de%20Producto%20Norte.png" width="154" height="128"></h:graphicImage> </a>
@@ -114,6 +43,8 @@
    <hr />	
 	<h1>Analisis de Consumos por Farmacia</h1>	
    <hr />
+ 		<div style="width:100%;font-size:36px;line-height:48px;background-color:#28395C;color:white"> <h:outputText value="#{listadoBean.salute}"> </h:outputText> Para rastrear en Analisis de Consumos por Farmacia <h:outputText value="#{loginBean.name}"></h:outputText>... </div>
+
     	<h2>Puebla Norte</h2>  
       	<h3>Enero 2014</h3>
  	  <a href="javascript:popup('/JSFFaceletsTutorial/images/Corporativo/2014/01 Enero/31/RelacionConsumoEneroEnvasesFarmaciasDelAhorroNorte.pdf')"><h:graphicImage url="/images/Corporativo/2014/01%20Enero/31/RelacionConsumoEneroEnvasesFarmaciasDelAhorroNorte.png" width="154" height="128"></h:graphicImage> </a>
@@ -160,41 +91,114 @@
       	<h3>Julio 2014</h3>
    <a href="javascript:popup('/JSFFaceletsTutorial/images/Corporativo/2014/07 Julio/31/RelacionConsumoJulioEnvasesFarmaciasDelAhorroSur.pdf')"><h:graphicImage url="/images/Corporativo/2014/07%20Julio/31/RelacionConsumoJulioEnvasesFarmaciasDelAhorroSur.png" width="154" height="128"></h:graphicImage> </a>
  
-		<h3>Prueba Obtener Farmacia</h3>
+		<h3>Prueba Obtener Farmacia con un Arreglo</h3>
+  		<div style="width:100%;font-size:36px;line-height:48px;background-color:#28395C;color:white"> <h:outputText value="#{listadoBean.salute}"> </h:outputText> Para rastrear en Farmacia con un Arreglo <h:outputText value="#{loginBean.name}"></h:outputText>... </div>
+
    		<ui:repeat value="#{listadoBean.pharmacies}" varStatus="loop">
    		<!--<div style="width:100%;font-size:36px;line-height:48px;background-color:#28395C;color:white"> <h:outputText value="#{listadoBean.pharmacies[loop.index]}"> </h:outputText> </div>-->
-   		<div style="width:100%;font-size:36px;line-height:48px;background-color:#28395C;color:white"> <h:outputText value="#{listadoBean.pharmacies[loop.index]}"> </h:outputText> Ruta de Farmacia: <h:outputText value="#{listadoBean.pharmacies[loop.index].rutaDeFarmacia}"> </h:outputText> id de Farmacia <h:outputText value="#{listadoBean.pharmacies[loop.index].idFarmacia}"> </h:outputText> Index: !! <h:outputText value="#{[loop.index]}"> </h:outputText> </div>
+   		<div style="width:100%;font-size:36px;line-height:48px;background-color:#28395C;color:white"> <h:outputText value="#{listadoBean.pharmacies[loop.index]}"> </h:outputText> Ruta de Farmacia: <h:outputText value="#{listadoBean.pharmacies[loop.index].rutaDeFarmacia}"> </h:outputText> id de Farmacia <h:outputText value="#{listadoBean.pharmacies[loop.index].idFarmacia}"> </h:outputText> Index: !! <h:outputText value="#{loop.index}"> </h:outputText> </div>
    		</ui:repeat>
    <hr />
 
-		<h3>Prueba De Una Tabla</h3>
+		<h3>Prueba Obtener Farmacia de un DataModel y publicarlo en Una Tabla</h3>
+	 		<div style="width:100%;font-size:36px;line-height:48px;background-color:#28395C;color:white"> <h:outputText value="#{listadoBean.salute}"> </h:outputText> Para rastrear en Obtener Farmacia de un DataModel <h:outputText value="#{loginBean.name}"></h:outputText>... </div>
 			
-			<h:dataTable value="#{listadoBean.pharmacies}" var="o"
+			<h:dataTable value="#{listadoBean.pharmacieList}" var="ph"
+    			rowIndexVar="rowId"
     			styleClass="order-table"
     			headerClass="order-table-header"
     			rowClasses="order-table-odd-row,order-table-even-row"
     		>
- 
+				 <h:column>
+    				<f:facet name="header">Index</f:facet>
+      				<!-- Start try to get Row -->				
+    				#{listadoBean.pharmacieList.rowIndex}
+       				<!-- Start try to get Row -->				   				
+    			</h:column>
+
     			<h:column>
     				<!-- column header -->
     				<f:facet name="header">Farmacia</f:facet>
     				<!-- row record -->
-    				#{o.nombreDeFarmacia}
+    				#{ph.nombreDeFarmacia}
     			</h:column>
  
     			<h:column>
     				<f:facet name="header">Ruta de Farmacia</f:facet>
-    				#{o.rutaDeFarmacia}
+    				#{ph.rutaDeFarmacia}
     			</h:column>
  
     			<h:column>
     				<f:facet name="header">Id de Farmacia</f:facet>
-    				#{o.idFarmacia}
+    				#{ph.idFarmacia}
     			</h:column>
  
     		</h:dataTable>
    <hr />
-   
+
+		<h3>Prueba Obtener Farmacia con un ArrayList</h3>
+	 		<div style="width:100%;font-size:36px;line-height:48px;background-color:#28395C;color:white"> <h:outputText value="#{listadoBean.salute}"> </h:outputText> Para rastrear en Farmacia con un ArrayList <h:outputText value="#{loginBean.name}"></h:outputText>... </div>
+
+			<h:dataTable value="#{listadoBean.listOfItems}" var="l"
+    			rowIndexVar="rowId"
+    			styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,order-table-even-row"
+    		>
+			
+    			<h:column>
+    				<!-- column header -->
+    				<f:facet name="header">Farmacia</f:facet>
+    				<!-- row record -->
+    				#{l.nombreDeFarmacia}
+    			</h:column>
+ 
+    			<h:column>
+    				<f:facet name="header">Ruta de Farmacia</f:facet>
+    				#{l.rutaDeFarmacia}
+    			</h:column>
+ 
+    			<h:column>
+    				<f:facet name="header">Id de Farmacia</f:facet>
+    				#{l.idFarmacia}
+    			</h:column>
+ 
+    		</h:dataTable>
+   <hr />
+ 		<h3>Prueba Añadir Farmacia en el Array List</h3>
+	 		<div style="width:100%;font-size:36px;line-height:48px;background-color:#28395C;color:white"> <h:outputText value="#{listadoBean.salute}"> </h:outputText> Para Añadir Farmacia <h:outputText value="#{loginBean.name}"></h:outputText>... </div>
+
+	<hr/>
+
+
+
+
+   <hr />  		
+   		
+   	   <h:form>
+	     <h:graphicImage url="/images/logos/LogoVikmar2013.png" width="154" height="128"></h:graphicImage>
+            <hr> </hr>
+            
+            <h:panelGrid columns="2">
+            	
+				<h:outputText value="Id de Farmacia:"></h:outputText>
+                <h:inputText value="#{listadoBean.idItem}" required="true"></h:inputText>
+                <h:outputText value="Nombre de Farmacia:"></h:outputText>
+                <h:inputText value="#{listadoBean.nombreItem}" required="true"></h:inputText>
+	           	<h:outputText value="Ruta:"></h:outputText>
+                <h:inputText value="#{listadoBean.detalleUnoItem}" required="true"></h:inputText>
+            
+            </h:panelGrid>
+            <h:commandButton value="Guarda Datos" action="#{listadoBean.addItem()}" ></h:commandButton>
+           
+        </h:form>
+   		
+   <hr />
+ 		<h3>Prueba para encontrar erro de encabezado</h3>
+	 		<div style="width:100%;font-size:36px;line-height:48px;background-color:#28395C;color:white"> <h:outputText value="#{listadoBean.salute}"> </h:outputText> para debuggear el head <h:outputText value="#{loginBean.name}"></h:outputText>... </div>
+
+	<hr/>
+   		
    		
 	</ui:define>
 

@@ -7,7 +7,9 @@ package com.tutorial;
 
 
 public class LoginBean {
-    private String nombre;
+
+	private static final long serialVersionUID = 1L;
+	private String nombre;
     private int nameCounter = 0;
     private String clave;
     private int passCounter = 0;
@@ -21,6 +23,7 @@ public class LoginBean {
     	if(nameCounter!= 0)
     	{	
     	System.out.println("Obtaining the name in the bean: "+ nameCounter);
+    	System.out.println("Show the pass: "+ magicKey);
     	}
     	nameCounter = nameCounter+1;
     	return nombre;

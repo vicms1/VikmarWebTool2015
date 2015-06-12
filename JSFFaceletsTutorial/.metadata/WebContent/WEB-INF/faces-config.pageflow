@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14029363477690" configfile="/JSFFaceletsTutorial/WebContent/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="welcome.xhtml" x="156" y="132" id="pf14029527014581" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14043158094450" path="/welcome.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="login.xhtml" x="48" y="36" id="pf14029527014593" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14043158094450" path="/login.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="welcome.xhtml" x="156" y="132" id="pf14029527014581" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf14329993234122" inlinks="pf14043158094450" path="/welcome.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="login.xhtml" x="48" y="36" id="pf14029527014593" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" outlinks="pf14043158094450" inlinks="pf14329993234122" path="/login.xhtml"/>
   <links id="pf14043158094450" target="pf14029527014581" source="pf14029527014593" outcome="magic" fromaction="#{loginBean.checkPassword()}"/>
+  <links id="pf14329993234122" target="pf14029527014593" source="pf14029527014581" outcome="yes" fromaction="#{listadoBean.addItem()}"/>
 </pageflow:Pageflow>
