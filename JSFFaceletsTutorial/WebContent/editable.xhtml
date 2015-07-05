@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/BasicTemplate.xhtml">
+	
+	
+	<ui:define name="content">
+	
+	<h:head>
+    	<h:outputStylesheet library="css" name="table-style.css"  />
+    </h:head>
+	
+		     <div style="width:100%;font-size:36px;line-height:48px;background-color:#28395C;color:white">Deseas modificar tus datos...
+	     </div>
+	     
+	     <h:form>
+	     <h:graphicImage url="/images/logos/LogoVikmar2013.png" width="154" height="128"></h:graphicImage>
+            <hr> </hr>
+	        </h:form>
+	
+	<h:dataTable value="#{listadoBean.listOfItems}" var="l"
+    			rowIndexVar="rowId"
+    			styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,order-table-even-row"
+    		>
+			
+    			<h:column>
+    				<!-- column header -->
+    				<f:facet name="header">Farmacia</f:facet>
+    				<!-- row record -->
+    				#{l.nombreDeFarmacia}
+    			</h:column>
+ 
+    			<h:column>
+    				<f:facet name="header">Ruta de Farmacia</f:facet>
+    				#{l.rutaDeFarmacia}
+    			</h:column>
+ 
+    			<h:column>
+    				<f:facet name="header">Id de Farmacia</f:facet>
+    				#{l.idFarmacia}
+    			</h:column>
+ 
+    		</h:dataTable>
+	
+	</ui:define>
+
+</ui:composition>
+</html>
