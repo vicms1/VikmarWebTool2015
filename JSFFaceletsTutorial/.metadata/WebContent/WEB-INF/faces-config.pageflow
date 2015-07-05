@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14029363477690" configfile="/JSFFaceletsTutorial/WebContent/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="welcome.xhtml" x="156" y="132" id="pf14029527014581" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf14329993234122" inlinks="pf14043158094450" path="/welcome.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="login.xhtml" x="48" y="36" id="pf14029527014593" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" outlinks="pf14043158094450" inlinks="pf14329993234122" path="/login.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="welcome.xhtml" x="312" y="228" id="pf14029527014581" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf14345861006843 pf14356165456118" inlinks="pf14043158094450 pf14345861006843" path="/welcome.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="login.xhtml" x="120" y="240" id="pf14029527014593" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" outlinks="pf14043158094450" path="/login.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="editable.xhtml" x="432" y="72" id="pf14356165456119" inlinks="pf14356165456118" path="/editable.xhtml"/>
   <links id="pf14043158094450" target="pf14029527014581" source="pf14029527014593" outcome="magic" fromaction="#{loginBean.checkPassword()}"/>
-  <links id="pf14329993234122" target="pf14029527014593" source="pf14029527014581" outcome="yes" fromaction="#{listadoBean.addItem()}"/>
+  <links id="pf14345861006843" target="pf14029527014581" source="pf14029527014581" outcome="yes" fromaction="#{listadoBean.addItem()}"/>
+  <links id="pf14356165456118" target="pf14356165456119" source="pf14029527014581" outcome="editable"/>
 </pageflow:Pageflow>
