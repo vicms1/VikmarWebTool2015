@@ -22,6 +22,7 @@
 	     <h:graphicImage url="/images/logos/LogoVikmar2013.png" width="154" height="128"></h:graphicImage>
             <hr> </hr>
 	        </h:form>
+   
 	
 	<h:dataTable value="#{listadoBean.listOfItems}" var="l"
     			rowIndexVar="rowId"
@@ -48,6 +49,62 @@
     			</h:column>
  
     		</h:dataTable>
+	           
+	            <hr> </hr>
+	
+	   	   	<h2>Prueba Editable</h2>
+	        
+  <h:form>
+	
+		<h:dataTable value="#{listadoBean.listOfItems}" var="o"
+          rowIndexVar="rowId"
+          styleClass="order-table"
+    	  headerClass="order-table-header"
+    	  rowClasses="order-table-odd-row,order-table-even-row"
+          >
+
+          <h:column>
+          
+            <f:facet name="header">Farmacia</f:facet>
+            
+            <h:inputText value="#{listadoBean.nameReplacing}" size="10" rendered="#{o.editable}" />
+            
+            <h:outputText value="#{o.nombreDeFarmacia}" rendered="#{not o.editable}" />
+          
+          </h:column>
+          
+          <h:column>
+          
+            <f:facet name="header">Ruta de Farmacia</f:facet>
+            
+            <h:inputText value="#{listadoBean.detailOneReplacing}" size="20" rendered="#{o.editable}" />
+            
+            <h:outputText value="#{o.rutaDeFarmacia}" rendered="#{not o.editable}" />
+            
+          </h:column>
+          
+          <h:column>
+            
+            <f:facet name="header">Id de Farmacia</f:facet>
+            
+            <h:inputText value="#{listadoBean.idReplacing}" size="10" rendered="#{o.editable}" />
+            
+            <h:outputText value="#{o.idFarmacia}" rendered="#{not o.editable}" />
+            
+          </h:column>
+        
+          
+        
+          <h:column>
+            
+            <f:facet name="header">Acción</f:facet>
+            <h:commandLink value="Edit" action="#{listadoBean.editAction(o)}" rendered="#{not o.editable}" />
+          </h:column>
+
+        </h:dataTable>
+        
+        <h:commandButton value="Save Changes" action="#{listadoBean.saveAction()}"> </h:commandButton>
+            </h:form>
 	
 	</ui:define>
 

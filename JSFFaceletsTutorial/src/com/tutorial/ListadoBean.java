@@ -23,6 +23,9 @@ public class ListadoBean implements Serializable {
     private int itemId;
     private String itemName;
     private String itemFirstDetail;
+    private int replacingId;
+    private String replacingName;
+    private String replacingFirstDetail;
     private boolean firstTime = true;
     
 	//getter and setter methods
@@ -64,6 +67,45 @@ public class ListadoBean implements Serializable {
 		return this.itemFirstDetail;
 	}
 	
+	public void setIdReplacing(String repId)
+	{
+		System.out.println("Setting the itemId en Listado bean desde welcome.xhtml");
+		this.replacingId = (int) Integer.parseInt(repId);
+		
+	}
+	
+	public String getIdReplacing()
+	{
+		return Integer.toString(this.replacingId);
+	}
+    
+	public void setNameReplacing(String repName)
+	{
+		System.out.println("Entramos al set NameReplacing del Listado Bean");
+		System.out.println("El nombre a remplazar es: " + repName);
+		this.replacingName = repName;
+		
+	}
+	
+	public String getNameReplacing()
+	{
+		System.out.println("El get nameReplacing es: " + this.replacingName);
+		return this.replacingName;
+	}
+
+	public void setDetailOneReplacing(String repFirstDetail)
+	{
+		System.out.println("El detalle a agregar es: "+repFirstDetail);
+		this.replacingFirstDetail = repFirstDetail;
+		
+	}
+	
+	public String getDetailOneReplacing()
+	{
+		return this.replacingFirstDetail;
+	}
+	
+
 	
 	//getter and setter methods
    
@@ -113,6 +155,7 @@ public class ListadoBean implements Serializable {
 	{
 		System.out.println("Entrando al método addItem en Listado Bean");		
 		Farmacia i = new Farmacia(itemId, itemName,itemFirstDetail);
+		i.setEditable(false);
 		itemList.add(i);
 		System.out.println("Antes de crear farmacia en add Item");		
 
@@ -175,12 +218,60 @@ public class ListadoBean implements Serializable {
     	};
     }
 	
+	public String saveAction(){
+		
+		System.out.println("Comenzando a cerrar lo editable de cada Farmacia");
+		for(Farmacia f : itemList){
+			System.out.println("Testeando editable de farmacia " + f.getNombreDeFarmacia() );
+			if(f.getEditable()){
+				System.out.println("Editable de farmacia " + f.getNombreDeFarmacia() +" abierto, cerrando..." );
+				System.out.println("El idFarmacia con this " + this.getIdReplacing() );
+				System.out.println("El idFarmacia SIN this " + itemId );
+				System.out.println("El idFarmacia f " + f.getIdFarmacia() );				
+				System.out.println("El Nombre con replacing " + this.getNameReplacing() );
+				System.out.println("El Nombre SIN this " + itemName );
+				System.out.println("El Nombre f " + f.getNombreDeFarmacia() );								
+				System.out.println("El Name Replacing es: " + this.getNameReplacing());
+				System.out.println("El Detalle con this " + this.getDetailOneReplacing() );
+				System.out.println("El Detalle SIN this " + itemFirstDetail );
+				System.out.println("El Detalle f " + f.getRutaDeFarmacia() );				
+
+				//f.setIdFarmacia(itemId);
+				//f.setNombreDeFarmacia(itemName);
+				//f.setRutaDeFarmacia(itemFirstDetail);
+				f.setIdFarmacia(this.replacingId);
+				f.setNombreDeFarmacia(this.replacingName);
+				f.setRutaDeFarmacia(this.replacingFirstDetail);
+				
+				f.setEditable(false);
+			}
+		}
+		System.out.println("Terminando de cerrar lo editable de cada Farmacia");
+		
+		return "editado";
+	}
+
+	
+    public String testAction()
+    {
+    	System.out.println("Inside the TestAction");
+ 
+		return "tested";
+
+    }
+	
+	
+	public String editAction(Farmacia f){
+		f.setEditable(true);
+		return "editable";
+	}
+	
 	public static class Farmacia{
 		 
 		int idFarmacia;
 		String nombreDeFarmacia;
 		String ruta;
-		
+		boolean editable;
  
 		public Farmacia(int idFarmacia, String nombreDeFarmacia, String rutaFarmacia) {
 			System.out.println("Creando Farmacia"+nombreDeFarmacia);
@@ -219,11 +310,23 @@ public class ListadoBean implements Serializable {
 		{
 			this.ruta = rF;	
 		}
+	
+		public boolean getEditable()
+		{
+			return this.editable;
+		}
+		
+		public void setEditable(boolean edi)
+		{
+			System.out.println("Cambiando la ediciion de la farmacia " + this.getNombreDeFarmacia());
+			this.editable = edi;
+		}
 		
 		public String toString()
 		{
 			return this.nombreDeFarmacia;
 		}
+		
 		
 	}
 	
